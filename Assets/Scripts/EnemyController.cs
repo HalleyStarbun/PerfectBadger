@@ -26,7 +26,6 @@ public class EnemyController : MonoBehaviour
             if (hit.transform == player.transform)
             {
                 agent.SetDestination(player.transform.position);
-                Debug.Log("YES");
             }
             //Debug.DrawRay(transform.position, rayPosition, Color.yellow);
         }
