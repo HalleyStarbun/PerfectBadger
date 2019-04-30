@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\CookieBullet.cs" />
     <Compile Include="Assets\Scripts\CookieFire.cs" />
     <Compile Include="Assets\Scripts\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
     <None Include="Assets\Mini Profiler\README.txt" />
     <None Include="Assets\Fonts\pdark.txt" />
     <None Include="Assets\Mini Profiler\CHANGELOG.txt" />

@@ -7,6 +7,10 @@ public class EnemyController : MonoBehaviour
 {
     public GameObject player;
     public float maxCloseness;
+    public int hitPoints;
+    public float reloadTime;
+    public float shootDistance;
+    private float reloadTimer;
     NavMeshAgent agent;
 
     // Start is called before the first frame update
@@ -28,6 +32,18 @@ public class EnemyController : MonoBehaviour
                 agent.SetDestination(player.transform.position);
             }
             //Debug.DrawRay(transform.position, rayPosition, Color.yellow);
+        }
+        if (hitPoints < 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Bullet")
+        {
+            hitPoints -= 1;
         }
     }
 }
