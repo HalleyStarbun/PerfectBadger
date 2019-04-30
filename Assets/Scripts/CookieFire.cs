@@ -8,12 +8,6 @@ public class CookieFire : MonoBehaviour
     public GameObject firePos;
     public float fireSpeed;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void FixedUpdate()
     {
