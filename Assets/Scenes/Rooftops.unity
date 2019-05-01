@@ -9029,7 +9029,7 @@ PrefabInstance:
     - target: {fileID: 3448587303796381027, guid: 56b3eefc217b48a4b986e19345e21a75,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 117.98
+      value: 125.44
       objectReference: {fileID: 0}
     - target: {fileID: 3448587303796381027, guid: 56b3eefc217b48a4b986e19345e21a75,
         type: 3}
@@ -9039,7 +9039,7 @@ PrefabInstance:
     - target: {fileID: 3448587303796381024, guid: 56b3eefc217b48a4b986e19345e21a75,
         type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 128
+      value: 96
       objectReference: {fileID: 0}
     - target: {fileID: 3448587303796381024, guid: 56b3eefc217b48a4b986e19345e21a75,
         type: 3}
