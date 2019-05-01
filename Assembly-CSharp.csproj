@@ -69,6 +69,7 @@
     <None Include="Assets\Mini Profiler\README.txt" />
     <None Include="Assets\Fonts\pdark.txt" />
     <None Include="Assets\Mini Profiler\CHANGELOG.txt" />
+    <None Include="Assets\UrbanNightSky\Readme.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Maxwell Kepler/Documents/GitHub/PerfectBadger/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

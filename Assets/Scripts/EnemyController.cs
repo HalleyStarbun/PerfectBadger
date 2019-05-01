@@ -30,6 +30,10 @@ public class EnemyController : MonoBehaviour
             if (hit.transform == player.transform)
             {
                 agent.SetDestination(player.transform.position);
+                transform.LookAt(player.transform, Vector3.up);
+                //transform.Rotate(0.0f, transform.rotation.y, 0.0f);
+                //Quaternion rotation = Quaternion.LookRotation(player.transform.position);
+                //transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 200);
             }
             //Debug.DrawRay(transform.position, rayPosition, Color.yellow);
         }
