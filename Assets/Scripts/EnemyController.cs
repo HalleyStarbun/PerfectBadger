@@ -13,14 +13,19 @@ public class EnemyController : MonoBehaviour
     public float shootDistance;     // Max distnace at which enemy will shoot
     public GameObject sparks;       // Death particles
     public GameObject firePos;      // Where to fire bullets from
+    public AudioClip[] soundList;
     private float reloadTimer;
     private bool isDead = false;
+    private AudioSource audioSource;
     NavMeshAgent agent;
+    Collider enemyHitbox;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        enemyHitbox = GetComponent<Collider>();
+        audioSource = GetComponent<AudioSource>();
         agent.stoppingDistance = maxCloseness;
         reloadTimer = 0.0f;
     }
@@ -28,12 +33,19 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hitPoints < 0)
+        if (hitPoints <= 0)
         {
+            hitPoints = 0;
             if (isDead == false)
             {
-                Instantiate(sparks, transform.position, transform.rotation);
+                agent.isStopped = true;
                 isDead = true;
+                enemyHitbox.enabled = false;
+                audioSource.PlayOneShot(soundList[1]);
+                audioSource.volume = 0.3f;
+                Instantiate(sparks, transform.position, transform.rotation);
+                GameObject model = transform.Find("robot").gameObject;
+                model.transform.rotation = Quaternion.Euler(-90f, (model.transform.rotation.y - 90f), model.transform.rotation.z);
             }
         }
         else
@@ -49,6 +61,7 @@ public class EnemyController : MonoBehaviour
                     if (reloadTimer > reloadTime)
                     {
                         Instantiate(bullet, firePos.transform.position, firePos.transform.rotation);
+                        audioSource.PlayOneShot(soundList[2]);
                         reloadTimer = 0.0f;
                     }
                     reloadTimer += Time.deltaTime;
