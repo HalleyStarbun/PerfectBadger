@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <None Include="Assets\Fonts\Reality Hyper SIL OFL Font License.txt" />
+    <None Include="Assets\Fonts\membra.txt" />
     <None Include="Assets\Mini Profiler\README.txt" />
     <None Include="Assets\Fonts\pdark.txt" />
     <None Include="Assets\Mini Profiler\CHANGELOG.txt" />
