@@ -14,7 +14,7 @@ public class EnemyController : MonoBehaviour
     public GameObject sparks;       // Death particles
     public GameObject firePos;      // Where to fire bullets from
     public AudioClip[] soundList;
-    private float reloadTimer;
+    private float reloadTimer = 0.0f;
     private bool isDead = false;
     private AudioSource audioSource;
     NavMeshAgent agent;
@@ -27,7 +27,6 @@ public class EnemyController : MonoBehaviour
         enemyHitbox = GetComponent<Collider>();
         audioSource = GetComponent<AudioSource>();
         agent.stoppingDistance = maxCloseness;
-        reloadTimer = 0.0f;
     }
 
     // Update is called once per frame
