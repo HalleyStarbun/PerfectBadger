@@ -241,8 +241,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
   maxCloseness: 5
-  hitPoints: 4
-  reloadTime: 1.5
+  hitPoints: 8
+  reloadTime: 0.5
   bullet: {fileID: 7746563019035969328, guid: 085c8ba2bce2a2748a0dc2c547e0e13f, type: 3}
   shootDistance: 15
   sparks: {fileID: 4387984636595904005, guid: f24e178e931770e4490340715116dc2d, type: 3}
@@ -389,6 +389,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: robot
       objectReference: {fileID: 0}
+    - target: {fileID: -7780734103960978560, guid: 28c967786e289d74eab00883caca5ca2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 996304819b2bb33479e764bf0f6f0791, type: 2}
+    - target: {fileID: -7780734103960978560, guid: 28c967786e289d74eab00883caca5ca2,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7780734103960978560, guid: 28c967786e289d74eab00883caca5ca2,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 28c967786e289d74eab00883caca5ca2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -458,21 +473,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.33172
-      objectReference: {fileID: 0}
-    - target: {fileID: -7780734103960978560, guid: 28c967786e289d74eab00883caca5ca2,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 996304819b2bb33479e764bf0f6f0791, type: 2}
-    - target: {fileID: -7780734103960978560, guid: 28c967786e289d74eab00883caca5ca2,
-        type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -7780734103960978560, guid: 28c967786e289d74eab00883caca5ca2,
-        type: 3}
-      propertyPath: m_ReceiveShadows
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28c967786e289d74eab00883caca5ca2, type: 3}
