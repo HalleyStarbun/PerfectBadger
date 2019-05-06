@@ -44,7 +44,7 @@ public class EnemyController : MonoBehaviour
                 audioSource.volume = 0.3f;
                 Instantiate(sparks, transform.position, transform.rotation);
                 GameObject model = transform.Find("robot").gameObject;
-                model.transform.rotation = Quaternion.Euler(-90f, (model.transform.rotation.y - 90f), model.transform.rotation.z);
+                model.transform.Rotate(-90f, transform.rotation.y, transform.rotation.y, Space.Self);
             }
         }
         else

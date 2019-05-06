@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// ALL THIS CODE was later merged into the FirstPersonController.cs file
+
 public class PlayerController : MonoBehaviour
 {
     public Text healthText;

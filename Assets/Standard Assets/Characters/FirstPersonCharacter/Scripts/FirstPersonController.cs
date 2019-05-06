@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
@@ -42,6 +44,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+        public Text healthText;
+        public RawImage deathScreen;
+        private int hitPoints = 100;
+        private bool isDead = false;
+        private float deathRotation = 0f;
+
         // Use this for initialization
         private void Start()
         {
@@ -55,12 +63,19 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+
+            healthText.text = "Health: " + hitPoints.ToString();
         }
 
 
         // Update is called once per frame
         private void Update()
         {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                SceneManager.LoadScene("Logos");
+            }
+
             RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
@@ -81,8 +96,40 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+
+            if (hitPoints <= 0)
+            {
+                hitPoints = 0;
+                isDead = true;
+            }
+            if (hitPoints >= 100)
+            {
+                hitPoints = 100;
+            }
+            healthText.text = "Health: " + hitPoints.ToString();
+            
+            if (isDead == true)
+            {
+                var tempColor = deathScreen.color;
+                tempColor.a = (tempColor.a + (Time.deltaTime/2.5f));
+                deathScreen.color = tempColor;
+                deathRotation = (deathRotation + (Time.deltaTime*30));
+                transform.Rotate(transform.rotation.x, transform.rotation.y, deathRotation, Space.Self);
+                if (deathRotation >= 80f)
+                {
+                    Debug.Log("Loading..");
+                    SceneManager.LoadScene("Rooftops");
+                }
+            }
         }
 
+    void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.tag == "Bullet")
+            {
+                hitPoints -= 4;
+            }
+        }
 
         private void PlayLandingSound()
         {
