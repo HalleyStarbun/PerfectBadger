@@ -1,0 +1,7 @@
+TODO:
+
+- Add intro
+- Finish level design
+- Add drone enemy
+- More sounds
+- Scenery?
