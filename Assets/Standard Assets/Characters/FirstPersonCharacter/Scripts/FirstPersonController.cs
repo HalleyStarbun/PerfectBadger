@@ -46,6 +46,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public Text healthText;
         public RawImage deathScreen;
+        public GameObject debugScreen;
         private int hitPoints = 100;
         private bool isDead = false;
         private float deathRotation = 0f;
@@ -74,6 +75,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 SceneManager.LoadScene("Logos");
+            }
+
+            if (Input.GetKeyDown(KeyCode.F3))
+            {
+                debugScreen.SetActive(true);
             }
 
             RotateView();
