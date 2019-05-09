@@ -543,7 +543,7 @@ MonoBehaviour:
   bullet: {fileID: 8906384830645353219, guid: d9e9c6d35b712d348814bc375596d852, type: 3}
   firePos: {fileID: 3448587303898593087}
   fireSpeed: 1
-  reloadTime: 0.1
+  reloadTime: 0.2
 --- !u!1 &8051487858982659441
 GameObject:
   m_ObjectHideFlags: 0

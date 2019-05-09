@@ -22,7 +22,7 @@ public class CookieFire : MonoBehaviour
 
         if (reloadTimer > reloadTime)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButton(0))
             {
                 Instantiate(bullet, firePos.transform.position, firePos.transform.rotation);
                 reloadTimer = 0.0f;
