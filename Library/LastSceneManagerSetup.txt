@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Rooftops.unity
+- path: Assets/Scenes/Logos.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

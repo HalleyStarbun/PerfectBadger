@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - CookieFire
     - EnemyController
     - IntroController
+    - LoadOnTouch
     - PlayerController
     Mini Profiler.dll:
     - kleberswf.tools.miniprofiler.FramerateValueProvider
@@ -29,11 +30,6 @@ ScriptsOnlyBuild:
     Unity.ProBuilder.Editor.dll:
     - UnityEditor.ProBuilder.EditorToolbar
     - UnityEditor.ProBuilder.ProBuilderEditor
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
@@ -92,7 +88,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9628}
     - Class: 114
-      Script: {instanceID: 85194}
+      Script: {instanceID: 11412}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -184,6 +180,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11108}
     - Class: 114
       Script: {instanceID: 11154}
+    - Class: 114
+      Script: {instanceID: 30340}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -271,7 +269,7 @@ ScriptsOnlyBuild:
     className: PreferenceDictionary
   - hash:
       serializedVersion: 2
-      Hash: 33a18e048513aae253754c906a8b34ad
+      Hash: 3777edc4d7c313f3cd26f04c314e1d77
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Characters.FirstPerson
     className: FirstPersonController
@@ -1183,7 +1181,7 @@ ScriptsOnlyBuild:
     className: TimedObjectDestructor
   - hash:
       serializedVersion: 2
-      Hash: 1837793f7e0ab1e073f5d285cadc800a
+      Hash: 70877bd29570312dc37f0a0f14796506
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CookieFire
@@ -1243,6 +1241,12 @@ ScriptsOnlyBuild:
     className: AmbientOcclusion
   - hash:
       serializedVersion: 2
+      Hash: 5a75a846e8eaff4479b3b55570eee2e7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: IntroController
+  - hash:
+      serializedVersion: 2
       Hash: 8649814970b42d345b89944b862453cc
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1267,12 +1271,12 @@ ScriptsOnlyBuild:
     className: AutoMobileShaderSwitch
   - hash:
       serializedVersion: 2
-      Hash: 5a75a846e8eaff4479b3b55570eee2e7
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: IntroController
+    className: LoadOnTouch
   platform: 24
   scenePathNames:
   - Assets/Scenes/Logos.unity
   - Assets/Scenes/Rooftops.unity
-  playerPath: C:/Users/Maxwell Kepler/Desktop/PerfectBadger_Linux_Private1/PerfectBadger.x86_64
+  playerPath: C:/Users/Maxwell Kepler/Desktop/PerfectBadger_0.99_Linux/PerfectBadger.x86_64

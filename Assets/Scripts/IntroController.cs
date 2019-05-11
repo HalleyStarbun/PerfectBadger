@@ -36,7 +36,6 @@ public class IntroController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("Bye bye");
             Application.Quit();
         }
 
